@@ -4,25 +4,25 @@
    Palette: near-black bg / cyan accent / off-white text
    ============================================= */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --bg:        #0d0f12;
-  --surface:   #141720;
-  --border:    #1e2330;
-  --accent:    #00e5c8;
-  --accent-dim:#00b09e;
-  --text:      #d8dce8;
-  --muted:     #6a7189;
-  --white:     #f0f2f8;
-
+  --bg: #0d0f12;
+  --surface: #141720;
+  --border: #1e2330;
+  --accent: #00e5c8;
+  --accent-dim: #00b09e;
+  --text: #d8dce8;
+  --muted: #6a7189;
+  --white: #f0f2f8;
   --font-mono: 'IBM Plex Mono', monospace;
   --font-sans: 'Inter', sans-serif;
-
   --sidebar-w: 280px;
 }
 
@@ -54,7 +54,7 @@ html {
   overflow-y: auto;
 }
 
-.sidebar__inner {
+.sidebar-inner {
   padding: 2.5rem 1.75rem;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,8 @@ html {
 }
 
 /* Identity */
-.identity__tag {
+
+.identity-tag {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--accent);
@@ -72,7 +73,7 @@ html {
   margin-bottom: 0.75rem;
 }
 
-.identity__name {
+.identity-name {
   font-family: var(--font-sans);
   font-size: 2.2rem;
   font-weight: 600;
@@ -82,20 +83,21 @@ html {
   margin-bottom: 0.5rem;
 }
 
-.identity__role {
+.identity-role {
   font-size: 0.8rem;
   color: var(--muted);
   line-height: 1.5;
 }
 
 /* Contact */
+
 .contact {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.contact__item {
+.contact-item {
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -105,11 +107,11 @@ html {
   transition: color 0.15s;
 }
 
-.contact__item:hover {
+.contact-item:hover {
   color: var(--accent);
 }
 
-.contact__icon {
+.contact-icon {
   font-family: var(--font-mono);
   color: var(--accent);
   flex-shrink: 0;
@@ -117,12 +119,13 @@ html {
 }
 
 /* Sidebar sections */
-.sidebar__section {
+
+.sidebar-section {
   border-top: 1px solid var(--border);
   padding-top: 1.5rem;
 }
 
-.sidebar__heading {
+.sidebar-heading {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 500;
@@ -133,6 +136,7 @@ html {
 }
 
 /* Stack tags */
+
 .stack-grid {
   display: flex;
   flex-wrap: wrap;
@@ -156,29 +160,31 @@ html {
 }
 
 /* Languages */
+
 .lang {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.lang__item {
+.lang-item {
   display: flex;
   justify-content: space-between;
   font-size: 0.78rem;
 }
 
-.lang__name {
+.lang-name {
   color: var(--text);
 }
 
-.lang__level {
+.lang-level {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--accent-dim);
 }
 
 /* Education */
+
 .edu {
   margin-bottom: 1rem;
 }
@@ -187,19 +193,19 @@ html {
   margin-bottom: 0;
 }
 
-.edu__course {
+.edu-course {
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--white);
   margin-bottom: 0.15rem;
 }
 
-.edu__school {
+.edu-school {
   font-size: 0.75rem;
   color: var(--text);
 }
 
-.edu__period {
+.edu-period {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--muted);
@@ -214,13 +220,14 @@ html {
 }
 
 /* Hero */
+
 .hero {
   margin-bottom: 3.5rem;
   padding-bottom: 3rem;
   border-bottom: 1px solid var(--border);
 }
 
-.hero__intro {
+.hero-intro {
   font-size: 1.05rem;
   font-weight: 300;
   color: var(--text);
@@ -229,12 +236,12 @@ html {
   max-width: 600px;
 }
 
-.hero__metrics {
+.hero-metrics {
   display: flex;
   gap: 2.5rem;
 }
 
-.metric__value {
+.metric-value {
   display: block;
   font-family: var(--font-mono);
   font-size: 1.5rem;
@@ -244,7 +251,7 @@ html {
   margin-bottom: 0.3rem;
 }
 
-.metric__label {
+.metric-label {
   font-size: 0.72rem;
   color: var(--muted);
   line-height: 1.4;
@@ -253,11 +260,12 @@ html {
 }
 
 /* Sections */
+
 .section {
   margin-bottom: 3rem;
 }
 
-.section__title {
+.section-title {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 500;
@@ -270,7 +278,7 @@ html {
   gap: 1rem;
 }
 
-.section__title::after {
+.section-title::after {
   content: '';
   flex: 1;
   height: 1px;
@@ -278,6 +286,7 @@ html {
 }
 
 /* Jobs */
+
 .job {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
@@ -289,26 +298,26 @@ html {
   padding-bottom: 0;
 }
 
-.job__header {
+.job-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 0.9rem;
 }
 
-.job__company {
+.job-company {
   font-size: 1rem;
   font-weight: 600;
   color: var(--white);
   margin-bottom: 0.2rem;
 }
 
-.job__role {
+.job-role {
   font-size: 0.8rem;
   color: var(--muted);
 }
 
-.job__period {
+.job-period {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--accent-dim);
@@ -316,14 +325,14 @@ html {
   margin-top: 0.2rem;
 }
 
-.job__bullets {
+.job-bullets {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
 }
 
-.job__bullets li {
+.job-bullets li {
   font-size: 0.85rem;
   color: var(--text);
   padding-left: 1.1rem;
@@ -331,7 +340,7 @@ html {
   line-height: 1.55;
 }
 
-.job__bullets li::before {
+.job-bullets li::before {
   content: '→';
   position: absolute;
   left: 0;
@@ -342,6 +351,7 @@ html {
 }
 
 /* Projects */
+
 .project {
   margin-bottom: 1.5rem;
   padding: 1.25rem 1.5rem;
@@ -355,7 +365,7 @@ html {
   border-color: var(--accent-dim);
 }
 
-.project__header {
+.project-header {
   display: flex;
   align-items: baseline;
   gap: 1rem;
@@ -363,19 +373,19 @@ html {
   flex-wrap: wrap;
 }
 
-.project__name {
+.project-name {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--white);
 }
 
-.project__tech {
+.project-tech {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--accent-dim);
 }
 
-.project__desc {
+.project-desc {
   font-size: 0.82rem;
   color: var(--text);
   line-height: 1.6;
@@ -383,7 +393,7 @@ html {
 
 /* ── RESPONSIVE ──────────────────────────────── */
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .layout {
     grid-template-columns: 1fr;
   }
@@ -397,17 +407,19 @@ html {
     padding: 2rem 1.5rem;
   }
 
-  .hero__metrics {
+  .hero-metrics {
     flex-wrap: wrap;
     gap: 1.5rem;
   }
 
-  .job__header {
+  .job-header {
     flex-direction: column;
     gap: 0.3rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+  * {
+    transition: none !important;
+  }
 }
