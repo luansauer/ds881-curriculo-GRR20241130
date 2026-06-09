@@ -1,0 +1,12 @@
+services:
+  curriculo:
+    build: .
+    container_name: ds881-curriculo
+    ports:
+      - "8080:8080"
+    volumes:
+      # Bind mount: qualquer alteração nos arquivos locais reflete
+      # imediatamente no container (hot reload via nginx servindo do volume)
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./style.css:/usr/share/nginx/html/style.css:ro
+    restart: unless-stopped
